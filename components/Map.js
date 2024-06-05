@@ -334,7 +334,6 @@ const categories = {
     },
   ],
 };
-
 const libraries = ["places"];
 const mapContainerStyle = {
   height: "100%",
@@ -363,11 +362,6 @@ const Map = () => {
     setSelectedMarker(marker);
     const { lat, lng } = marker.coordinate;
     mapRef.current.panTo({ lat, lng });
-    mapRef.current.animateCamera({
-      target: { lat, lng },
-      zoom: 16,
-      duration: 1000, // duration in ms for the animation
-    });
   };
 
   const handleCategoryClick = (category) => {
@@ -446,7 +440,6 @@ const Map = () => {
                 <div
                   className="marker-label"
                   onClick={() => handleMarkerClick(marker)}
-                  
                 >
                   {marker.title}
                 </div>
@@ -460,9 +453,26 @@ const Map = () => {
               }}
               onCloseClick={() => setSelectedMarker(null)}
             >
-              <div className="p-2">
+              <div
+                className="custom-infowindow"
+              >
+                <button
+                  className="custom-infowindow-close"
+                  onClick={() => setSelectedMarker(null)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    position: "absolute",
+                    top: "5px",
+                    right: "5px",
+                    fontSize: "16px",
+                    cursor: "pointer",
+                  }}
+                >
+                  &times;
+                </button>
                 <h3 className="font-bold marker-title">{selectedMarker.title}</h3>
-                <p className="marker-title">{selectedMarker.description}</p>
+                <p className="marker-description">{selectedMarker.description}</p>
               </div>
             </InfoWindow>
           )}
