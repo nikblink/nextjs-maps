@@ -56,7 +56,41 @@ body {
 .gm-style-iw-chr {
   display: none !important;
 }
+.gm-style-iw{
+  pointer-events: none;
+}
+.gm-style-iw,
+.gm-style-iw div {
+  overflow: hidden !important;
+}
 
+.marker-title {
+  color: #000;
+  text-align: center;
+}
+.marker-description {
+  text-align: left;
+}
+
+.marker-label {
+  font-weight: 900;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 18px;
+  padding: 10px;
+  transform: translate(-50%, 0%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.gm-style-iw-chr {
+  display: none !important;
+}
+.gm-style-iw{
+  pointer-events: none;
+}
 .gm-style-iw,
 .gm-style-iw div {
   overflow: hidden !important;
