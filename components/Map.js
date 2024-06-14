@@ -390,7 +390,7 @@ const center = {
 
 const Map = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyA96s1BlGOisiT3McdyC0fWZOGQhbZNFq8",
+    googleMapsApiKey: "",
     libraries,
   });
 
