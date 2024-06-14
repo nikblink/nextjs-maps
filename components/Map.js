@@ -346,7 +346,7 @@ const center = {
 
 const Map = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyA96s1BlGOisiT3McdyC0fWZOGQhbZNFq8", // Add your API key here
+    googleMapsApiKey: "", // Add your API key here
     libraries,
   });
 
